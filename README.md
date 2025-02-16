@@ -1,8 +1,3 @@
-# BeoRecruitment
-The purpose of this project is to facilitate a technical interview of potential new hires to Bang & Olufsen A/S.
-
-Please read the assignement and make sure you understand it. If you have any questions, please reach out to Martin (malo@bang-olufsen.dk).
-
 # The Assignment
 Build a small app in MAUI that allows the user to search for artists on Spotify.
 
