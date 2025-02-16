@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BeoRecruitment</name>
+    </assembly>
+    <members>
+        <member name="T:BeoRecruitment.Services.INavigationService">
+            <summary>
+            The worlds most simple navigation service.
+            </summary>
+        </member>
+        <member name="M:BeoRecruitment.Services.INavigationService.NavigateToAsync``1">
+            <summary>
+            Navigate to a view model.
+            </summary>
+            <typeparam name="TViewModel">
+            The view model to navigate to.
+            </typeparam>
+        </member>
+        <member name="M:BeoRecruitment.Services.INavigationService.NavigateToAsync``2(``1)">
+             <summary>
+             Navigate to a view model parsing a parameter.<br/>
+             The <typeparamref name="TViewModel"/> must implement
+             <see cref="T:BeoRecruitment.Services.INavigationParameter`1"/> in order to receive the parameter.
+             </summary>
+             <typeparam name="TViewModel">
+             The view model to navigate to.
+             </typeparam>
+             <typeparam name="TParameter">
+            The type of the parameter to pass.
+             </typeparam>
+             <param name="parameter">
+             The actual parameter.
+             </param>
+        </member>
+        <member name="T:BeoRecruitment.Services.INavigationParameter`1">
+            <summary>
+            Used for pasing parameters when navigating to view models.<br/>
+            The view model must implement this interface in order to receive the parameter.
+            </summary>
+            <typeparam name="TParameter">
+            The type of the parameter to pass.
+            </typeparam>
+        </member>
+        <member name="M:BeoRecruitment.Services.INavigationParameter`1.SetParameter(`0)">
+            <summary>
+            This is called before the view model is navigated to.
+            </summary>
+            <param name="parameter">
+            The parameter to pass.
+            </param>
+        </member>
+        <member name="T:BeoRecruitment.Services.IViewLocator">
+            <summary>
+            A very simple view locater that matches view models and views together.
+            </summary>
+        </member>
+        <member name="M:BeoRecruitment.Services.IViewLocator.RegisterView``2">
+            <summary>
+            Register the view model <typeparamref name="TViewModel"/>
+            with the view <typeparamref name="TView"/>.
+            </summary>
+        </member>
+        <member name="M:BeoRecruitment.Services.IViewLocator.LocateView``1">
+            <summary>
+            Used for locating a view given the view model <typeparamref name="TViewModel"/>.
+            </summary>
+            <returns>
+            The type of the view registered with <typeparamref name="TViewModel"/>.
+            </returns>
+        </member>
+        <member name="T:BeoRecruitment.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+    </members>
+</doc>
